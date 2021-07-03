@@ -19,7 +19,7 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <checkstyle.config.location>check-style.xml</checkstyle.config.location>
+        <checkstyle.config.location>checkstyle-config.xml</checkstyle.config.location>
     </properties>
 
 </project>
