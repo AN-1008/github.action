@@ -8,18 +8,34 @@
     <artifactId>zuul</artifactId>
     <version>1.0-SNAPSHOT</version>
          <plugin>
-         <groupId>org.apache.maven.plugins</groupId>
-         <artifactId>maven-checkstyle-plugin</artifactId>
-         <version>2.16</version>
-         <configuration>
-                  <configLocation>${checkstyle.config.location}</configLocation>
-         </configuration>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-checkstyle-plugin</artifactId>
+                  <version>2.16</version>
+                  <configuration>
+                           <configLocation>${checkstyle.config.location}</configLocation>
+                  </configuration>
          </plugin>
+         
+         <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>cn.zoom.wqz.filter.Application</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
          
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <checkstyle.config.location>checkstyle-config.xml</checkstyle.config.location>
     </properties>
+         
 
 </project>
