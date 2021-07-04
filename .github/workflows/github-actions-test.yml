@@ -18,7 +18,20 @@ jobs:
     # 先将仓库的代码checkout到环境中，github提供了checkout的方法，只需要我们加上这条即可
     - uses: actions/checkout@v1
     # 为接下来所执行的shell命名，可省略
-    - name: executing
+    - name: back
       run: 
         # 指定所要运行的shell
-        cat BackCommandTest.java
+        cat src\main\java\test\cn\edu\whut\sept\zuul\BackCommandTest.java
+    - name: back_plus
+      run:
+        cat BackPlusCommandTest.java
+    - name: look
+      run: 
+        cat LookCommandTest.java
+    - name: stay
+      run: 
+        cat StayCommandTest.java
+    - name: package
+      run: 
+        mvn package assembly:single  
+
